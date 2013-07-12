@@ -11,8 +11,9 @@ class people::schwomp::applications{
     include android::studio
     include sublime_text_2
     include iterm2::dev
-    
+
     class { 'intellij':
         edition => 'community'
     }
+    dotfiles { 'jv': gituser => 'schwomp'; }
 }
