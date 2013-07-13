@@ -1,10 +1,10 @@
 class people::schwomp::applications{
-	include zsh
-	include python
-	include chrome::canary
-	include chrome
-	include alfred
-	include shortcat
+    include zsh
+    include python
+    include chrome::canary
+    include chrome
+    include alfred
+    include shortcat
     include java
     include android::sdk
     include android::platform_tools
@@ -14,5 +14,4 @@ class people::schwomp::applications{
     class { 'intellij':
         edition => 'community'
     }
-    dotfiles { 'jv': gituser => 'schwomp'; }
 }
