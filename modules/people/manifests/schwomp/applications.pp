@@ -8,7 +8,6 @@ class people::schwomp::applications{
     include java
     include android::sdk
     include android::platform_tools
-    include android::studio
     include sublime_text_2
     include iterm2::dev
     include ohmyzsh
