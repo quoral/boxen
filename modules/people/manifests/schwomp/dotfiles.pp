@@ -3,7 +3,7 @@ class people::schwomp::dotfiles{
     $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
 
     repository { $dotfiles_dir:
-      source => "${::github_user}/dotfiles"
+      source => "${::github_login}/dotfiles"
     }
 
     file { "${home}/vim":
