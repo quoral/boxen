@@ -1,7 +1,6 @@
 class people::schwomp::dotfiles{
     $home = "/Users/${::boxen_user}"
     $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
-
     repository { $dotfiles_dir:
       source => "${::github_login}/dotfiles"
     }
@@ -14,7 +13,7 @@ class people::schwomp::dotfiles{
 
     file { "${home}/.zshrc":
       ensure  => link,
-      target  => "${dotfiles_dir}/.zshrc",
+      target  => "${dotfiles_dir}/zshrc",
       require => Repository[$dotfiles_dir]
     }
 
@@ -38,20 +37,9 @@ class people::schwomp::dotfiles{
       target  => "${dotfiles_dir}/slate.js",
       require => Repository[$dotfiles_dir]
     }
-############################################
-    #Windowmanager shit!
-    include slate
-    include keyremap4macbook
-    include keyremap4macbook::login_item
-    keyremap4macbook::private_xml{'private.xml':
-        source => "${dotfiles_dir}/configs/private.xml",
-        require => Repository[$dotfiles_dir]
-    }
-    keyremap4macbook::set{ 'parameter.keyoverlaidmodifier_timeout':
-        value => '200'
-    }
-    include pckeyboardhack::login_item
-    pckeyboardhack::bind { 'keyboard bindings':
-        mappings => { 'capslock' => 80 }
+    file { "${home}/Library/Application Support/KeyRemap4Macbook/private.xml":
+      ensure => link,
+      target => "${dotfiles_dir}/configs/private.xml",
+      require => Repository[$dotfiles_dir],
     }
 }
