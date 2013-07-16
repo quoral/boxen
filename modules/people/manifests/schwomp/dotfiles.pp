@@ -37,6 +37,11 @@ class people::schwomp::dotfiles{
       target  => "${dotfiles_dir}/slate.js",
       require => Repository[$dotfiles_dir]
     }
+
+    #Some ugly shit for getting the configs in the right place
+    file { "${home}/Library/Application Support/KeyRemap4Macbook/":
+      ensure => "directory",
+    }
     file { "${home}/Library/Application Support/KeyRemap4Macbook/private.xml":
       ensure => link,
       target => "${dotfiles_dir}/configs/private.xml",
