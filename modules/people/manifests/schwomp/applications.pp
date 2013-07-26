@@ -1,4 +1,5 @@
 class people::schwomp::applications{
+    include alfred
     include zsh
     include python
     include chrome::canary
@@ -11,6 +12,7 @@ class people::schwomp::applications{
     include sublime_text_2
     include iterm2::dev
     include ohmyzsh
+    include spotify
     class { 'intellij':
         edition => 'community'
     }
