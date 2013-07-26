@@ -36,7 +36,7 @@ class people::schwomp::osx{
 
 
     
-    ## Remove the default crap  
+    ## Remove the default applications in the dock  
     
     dockutil::item { 'Remove Launchpad':
         item    => "/Applications/Launchpad.app",
