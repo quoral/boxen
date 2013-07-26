@@ -3,7 +3,7 @@ class people::schwomp::windowmanager{
     
     include slate
     include keyremap4macbook
-    
+    keyremap4macbook::remap{ 'f19_to_hyper': }
     keyremap4macbook::set{ 'parameter.keyoverlaidmodifier_timeout':
         value => '200'
     }
