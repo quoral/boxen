@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
-    alfred (1.1.1)
+    alfred (1.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-android
@@ -22,6 +22,11 @@ GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dockutil
+  specs:
+    dockutil (0.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -104,6 +109,11 @@ GITHUBTARBALL
     slate (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-spotify
+  specs:
+    spotify (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sublime_text_2
   specs:
     sublime_text_2 (1.1.2)
@@ -154,11 +164,12 @@ GITHUBTARBALL
     pckeyboardhack (1.0.2)
 
 DEPENDENCIES
-  alfred (= 1.1.1)
+  alfred (= 1.1.2)
   android (= 1.0.0)
   boxen (= 2.1.0)
   chrome (= 1.1.1)
   dnsmasq (= 1.0.0)
+  dockutil (= 0.1.2)
   gcc (= 1.0.0)
   git (= 1.2.2)
   homebrew (= 1.1.2)
@@ -179,6 +190,7 @@ DEPENDENCIES
   ruby (= 4.1.0)
   shortcat (= 1.0.4)
   slate (= 1.0.0)
+  spotify (= 1.0.1)
   stdlib (= 4.0.2)
   sublime_text_2 (= 1.1.2)
   sudo (= 1.0.0)
