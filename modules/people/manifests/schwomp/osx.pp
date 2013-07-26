@@ -1,4 +1,5 @@
-class people::schwomp::osx{
+class people::schwomp::osx{    
+
     include dockutil
 
     dockutil::item{ 'Add Chrome Canary':
@@ -7,7 +8,6 @@ class people::schwomp::osx{
         position => 1,
         action  => "add",
         require => Class['chrome::canary']
-
     }
 
     dockutil::item { 'Add Sublime Text 2':
@@ -15,7 +15,7 @@ class people::schwomp::osx{
         label   => "Sublime Text 2",
         position => 2,
         action => "add",
-        require => Class['chrome::canary']
+        require => Class['sublime_text_2']
     }
 
     dockutil::item { 'Add iTerm':
