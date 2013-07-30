@@ -70,7 +70,7 @@ node default {
   include ruby
 
   package {
-  'python'
+    'python':
   }
 
   # common, useful packages
