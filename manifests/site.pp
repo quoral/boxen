@@ -69,6 +69,10 @@ node default {
   # default ruby versions
   include ruby
 
+  package {
+  'python'
+  }
+
   # common, useful packages
   package {
     [
