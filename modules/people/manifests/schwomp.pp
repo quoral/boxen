@@ -4,4 +4,5 @@ class people::schwomp {
     include people::schwomp::windowmanager
     include people::schwomp::osx
     include people::schwomp::login_items
+    include people::schwomp::osx_defaults
 }

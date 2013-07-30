@@ -1,4 +1,6 @@
-class osx_config::system {
+class people::schwomp::osx_defaults {
+
+  include osx::dock
 
   boxen::osx_defaults {
     'Expand save panel by default':
@@ -32,6 +34,13 @@ class osx_config::system {
       value  => 'true',
       type   => 'bool',
       user   => $::boxen_user;
+
+    'Auto Hide the Dock':
+      user => $::boxen_user,
+      key => 'autohide',
+      domain => 'com.apple.dock',
+      value => true,
+      notify => Exec['killall Dock'];
   }
 
 }

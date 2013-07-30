@@ -14,8 +14,6 @@ class people::schwomp::applications{
     include ohmyzsh
     include spotify
     include firefox
-    include firefox::ux
-    include firefox::aurora
     class { 'intellij':
         edition => 'community'
     }
