@@ -71,6 +71,7 @@ node default {
 
   package {
     'python':
+      ensure => latest
   }
 
   # common, useful packages
