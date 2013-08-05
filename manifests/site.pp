@@ -69,11 +69,6 @@ node default {
   # default ruby versions
   include ruby
 
-  package {
-    'python':
-      ensure => latest
-  }
-
   # common, useful packages
   package {
     [

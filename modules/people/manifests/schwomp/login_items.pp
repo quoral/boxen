@@ -17,12 +17,13 @@ class people::schwomp::login_items{
         hidden => true,
         require => Class['keyremap4macbook']
     }
-    osx_login_item{ 'Slate':
-        name => "Slate",
-        path => "/Applications/Slate.app",
-        hidden => true,
-        require => Class['slate']
-    }
+    $xnomad_dir = "${boxen::config::srcdir}/xnomad"
+    #osx_login_item{ 'Xnomad':
+    #    name    =>  "Xnomad",
+    #    path    =>  "${xnomad_dir}/xnomad",
+    #    hidden  =>  true,
+    #    require =>  Repository[$xnomad_dir]
+    #}
     osx_login_item{ 'Shortcat':
         name => "Shortcat",
         path => "/Applications/Shortcat.app",

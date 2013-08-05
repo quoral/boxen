@@ -38,7 +38,6 @@ github "xquartz",    "1.1.0"
 # https://github.com/boxen.
 
 github "alfred",     		"1.1.2"
-github "zsh",        		"1.0.0"
 github "xquartz",    		"1.1.0"
 github "python",     		"1.2.1"
 github "chrome",     		"1.1.1"

@@ -1,6 +1,15 @@
 class people::schwomp::dotfiles{
     $home = "/Users/${::boxen_user}"
     $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+    $emacs_dir = "${boxen::config::srcdir}/emacs.d"
+    repository { $emacs_dir:
+      source => "${::github_login}/emacs.d"
+    }
+    file { "${home}/.emacs.d":
+      ensure => link,
+      target => $emacs_dir
+    }
+
     repository { $dotfiles_dir:
       source => "${::github_login}/dotfiles"
     }
@@ -22,11 +31,6 @@ class people::schwomp::dotfiles{
       target  => "${dotfiles_dir}/vimrc",
       require => Repository[$dotfiles_dir]
     } 
-    file { "${home}/.emacs.d":
-      ensure  => link,
-      target  => "${dotfiles_dir}/emacs.d",
-      require => Repository[$dotfiles_dir]
-    }
     file { "${home}/.slate":
       ensure  => link,
       target  => "${dotfiles_dir}/slate",
@@ -37,7 +41,12 @@ class people::schwomp::dotfiles{
       target  => "${dotfiles_dir}/slate.js",
       require => Repository[$dotfiles_dir]
     }
-
+    
+    file { "${home}/.config":
+      ensure  => link,
+      target  => "${dotfiles_dir}/config",
+      require => Repository[$dotfiles_dir] 
+    }
     #Some ugly shit for getting the configs in the right place
     file { "${home}/Library/Application Support/KeyRemap4Macbook/":
       ensure => "directory",

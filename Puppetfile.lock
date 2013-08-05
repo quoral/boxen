@@ -149,11 +149,6 @@ GITHUBTARBALL
     xquartz (1.1.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-zsh
-  specs:
-    zsh (1.0.0)
-
-GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
   specs:
     property_list_key (0.1.0)
@@ -215,5 +210,4 @@ DEPENDENCIES
   vim (= 1.0.5)
   xquartz (= 1.1.0)
   xquartz (= 1.1.0)
-  zsh (= 1.0.0)
 
