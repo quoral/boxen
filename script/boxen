@@ -76,4 +76,6 @@ require "boxen/cli"
 
 # Okay, let's run this thing.
 
+load "script/fish_generator"
+
 exit Boxen::CLI.run ARGV
