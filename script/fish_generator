@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
- 
+#This fine piece of script is written by burke at https://gist.github.com/burke/5066634
+#Please give him the best, really awesome software.
 Dir.chdir("/opt/boxen") do
  
   File.open(File.expand_path("~/.config/fish/boxen.fish"), "w") do |f|
