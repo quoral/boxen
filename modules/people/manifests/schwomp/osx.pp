@@ -2,22 +2,14 @@ class people::schwomp::osx{
 
     include dockutil
 
-    dockutil::item{ 'Add Chrome Canary':
-        item    => "/Applications/Google Chrome Canary.app",
-        label   => "Google Chrome Canary",
+    dockutil::item{ 'Add Chrome':
+        item    => "/Applications/Google Chrome.app",
+        label   => "Google Chrome",
         position => 1,
         action  => "add",
-        require => Class['chrome::canary']
+        require => Class['chrome']
     }
-
-    dockutil::item { 'Add Sublime Text 2':
-        item    => "/Applications/Sublime Text 2.app",
-        label   => "Sublime Text 2",
-        position => 2,
-        action => "add",
-        require => Class['sublime_text_2']
-    }
-
+ 
     dockutil::item { 'Add iTerm':
         item     => "/Applications/iTerm.app",
         label    => "iTerm",
@@ -33,7 +25,13 @@ class people::schwomp::osx{
         action  => "add",
         require => Class['spotify']
     }
-
+    dockutil::item { 'Add Emacs':
+      item => "/Application/Emacs.app",
+      label => "Emacs",
+      position => 2,
+      action => "add",
+      require => Class[people::schwomp::applications::emacs]
+    }
 
     
     ## Remove the default applications in the dock  

@@ -17,13 +17,18 @@ class people::schwomp::login_items{
         hidden => true,
         require => Class['keyremap4macbook']
     }
-    $xnomad_dir = "${boxen::config::srcdir}/xnomad"
-    #osx_login_item{ 'Xnomad':
-    #    name    =>  "Xnomad",
-    #    path    =>  "${xnomad_dir}/xnomad",
-    #    hidden  =>  true,
-    #    require =>  Repository[$xnomad_dir]
-    #}
+    osx_login_item{ 'Xnomad':
+        name    =>  "Xnomad",
+        path    =>  "/Applications/Xnomad.app",
+        hidden  =>  true,
+        require =>  Class[people::schwomp::windowmanager]
+    }
+    osx_login_item{ 'ShadowKiller':
+        name    =>  "ShadowKiller",
+        path    =>  "/Applications/ShadowKiller.app",
+        hidden  =>  true,
+        require =>  Class[people::schwomp::windowmanager]
+    }
     osx_login_item{ 'Shortcat':
         name => "Shortcat",
         path => "/Applications/Shortcat.app",

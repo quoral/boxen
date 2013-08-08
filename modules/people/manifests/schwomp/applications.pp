@@ -8,7 +8,6 @@ class people::schwomp::applications{
     include java
     include android::sdk
     include android::platform_tools
-    include sublime_text_2
     include iterm2::dev
     include ohmyzsh
     include spotify
@@ -33,12 +32,13 @@ class people::schwomp::applications{
         }
     }
     include fishshell
-    #file_line { 'add zsh to /etc/shells':
-    #    path    => '/etc/shells',
-    #    line    => "${boxen::config::homebrewdir}/bin/zsh",
-    #    require => Package['fishshell'],
-    #}
-    class { 'intellij':
-        edition => 'community'
+    class emacs{ #I silently hate myself forever
+      $emacs_version = 'Emacs-2013-08-08-113753-universal-10.6.8'
+      package{ 'emacs':
+        source => "http://emacsformacosx.com/emacs-builds/${emacs_version}.dmg",
+        provider => appdmg,
+        ensure => installed
+      }
     }
+    include emacs
 }
