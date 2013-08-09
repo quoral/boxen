@@ -81,7 +81,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.2.8)
+    nodejs (3.2.9)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -106,7 +106,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.2.0)
+    ruby (6.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-shortcat
@@ -176,7 +176,7 @@ DEPENDENCIES
   java (= 1.1.2)
   keyremap4macbook (= 1.0.4)
   nginx (= 1.4.2)
-  nodejs (= 3.2.8)
+  nodejs (= 3.2.9)
   ohmyzsh (= 1.0.0)
   openssl (= 1.0.0)
   osx (= 1.4.0)
@@ -184,7 +184,7 @@ DEPENDENCIES
   property_list_key (= 0.1.0)
   python (= 1.2.1)
   repository (= 2.2.0)
-  ruby (= 6.2.0)
+  ruby (= 6.3.0)
   shortcat (= 1.0.4)
   spotify (= 1.0.1)
   stdlib (= 4.1.0)
