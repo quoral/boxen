@@ -3,7 +3,8 @@ class people::schwomp::windowmanager{
     include pckeyboardhack
     class tranquil{ #Dirtydirtydirty
           exec { "wget -O /var/tmp/tranquil.pkg http://cl.ly/OCGB/download/tranquil.pkg ":
-          creates => "/var/tmp/tranquil.pkg"
+          creates => "/var/tmp/tranquil.pkg",
+          require => Package[wget]
         }
         package{ 'tranquil':
           source => "/var/tmp/tranquil.pkg",
