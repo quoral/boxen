@@ -61,4 +61,9 @@ class people::schwomp::applications{
       }
     }
     include vcprompt
+    package{ 'viber':
+      source => "http://download.viber.com/desktop/mac/Viber.dmg",
+      provider => appdmg,
+      ensure => installed
+    }
 }
