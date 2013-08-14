@@ -1,4 +1,4 @@
-class people::schwomp::osx{    
+class people::kallekrantz::osx{    
 
     include dockutil
 
@@ -30,7 +30,7 @@ class people::schwomp::osx{
       label => "Emacs",
       position => 2,
       action => "add",
-      require => Class[people::schwomp::applications::emacs]
+      require => Class[people::kallekrantz::applications::emacs]
     }
 
     

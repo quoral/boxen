@@ -1,4 +1,4 @@
-class people::schwomp::applications{
+class people::kallekrantz::applications{
     include alfred
     include python
     include chrome::canary

@@ -1,4 +1,4 @@
-class people::schwomp::login_items{
+class people::kallekrantz::login_items{
     osx_login_item{ 'Alfred 2':
         name => "Alfred 2",
         path => "/Applications/Alfred 2.app",
@@ -21,13 +21,13 @@ class people::schwomp::login_items{
         name    =>  "Xnomad",
         path    =>  "/Applications/Xnomad.app",
         hidden  =>  true,
-        require =>  Class[people::schwomp::windowmanager]
+        require =>  Class[people::kallekrantz::windowmanager]
     }
     osx_login_item{ 'ShadowKiller':
         name    =>  "ShadowKiller",
         path    =>  "/Applications/ShadowKiller.app",
         hidden  =>  true,
-        require =>  Class[people::schwomp::windowmanager]
+        require =>  Class[people::kallekrantz::windowmanager]
     }
     osx_login_item{ 'Shortcat':
         name => "Shortcat",

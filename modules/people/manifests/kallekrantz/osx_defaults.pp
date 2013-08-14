@@ -1,4 +1,4 @@
-class people::schwomp::osx_defaults {
+class people::kallekrantz::osx_defaults {
 
   include osx::dock
 

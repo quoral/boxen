@@ -1,4 +1,4 @@
-class people::schwomp::dotfiles{
+class people::kallekrantz::dotfiles{
     $home = "/Users/${::boxen_user}"
     $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
     $emacs_dir = "${boxen::config::srcdir}/emacs.d"
@@ -51,7 +51,7 @@ class people::schwomp::dotfiles{
       ensure => link,
       target => "${dotfiles_dir}/configs/xnomad",
       require => [Repository[$dotfiles_dir],
-                  Class[people::schwomp::windowmanager::xnomad]]
+                  Class[people::kallekrantz::windowmanager::xnomad]]
       }
     #Some ugly shit for getting the configs in the right place
     file { "${home}/Library/Application Support/KeyRemap4Macbook/":

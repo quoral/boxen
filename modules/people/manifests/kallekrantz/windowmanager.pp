@@ -1,4 +1,4 @@
-class people::schwomp::windowmanager{
+class people::kallekrantz::windowmanager{
     include keyremap4macbook
     include pckeyboardhack
     class tranquil{ #Dirtydirtydirty
