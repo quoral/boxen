@@ -47,12 +47,7 @@ class people::kallekrantz::dotfiles{
       target  => "${dotfiles_dir}/config",
       require => Repository[$dotfiles_dir] 
     }
-    file { "/Applications/Xnomad.app/Contents/Resources/script":
-      ensure => link,
-      target => "${dotfiles_dir}/configs/xnomad",
-      require => [Repository[$dotfiles_dir],
-                  Class[people::kallekrantz::windowmanager::xnomad]]
-      }
+
     #Some ugly shit for getting the configs in the right place
     file { "${home}/Library/Application Support/KeyRemap4Macbook/":
       ensure => "directory",

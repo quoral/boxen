@@ -1,6 +1,8 @@
 class people::kallekrantz::applications{
     include alfred
+    include dropbox
     include python
+    include brewcask
     include chrome::canary
     include chrome
     include alfred
@@ -9,7 +11,6 @@ class people::kallekrantz::applications{
     include android::sdk
     include android::platform_tools
     include iterm2::dev
-    include ohmyzsh
     include spotify
     include firefox
     class fishshell{ #Horribly bloated way of doing this. May get around to do a proper boxen thingy later.

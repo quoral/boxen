@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jalessio/puppet-brewcask.git
+  ref: master
+  sha: 458df853f1c6d650f4960cb0fcc5d6a36e3e0bbf
+  specs:
+    brewcask (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
@@ -177,6 +184,7 @@ DEPENDENCIES
   alfred (= 1.1.6)
   android (= 1.0.0)
   boxen (= 3.3.4)
+  brewcask (>= 0)
   chrome (= 1.1.2)
   dnsmasq (= 1.0.0)
   dockutil (= 0.1.2)

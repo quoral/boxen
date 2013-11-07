@@ -26,6 +26,12 @@ def dev(name, *args)
   mod name, :path => "#{ENV['HOME']}/src/boxen/puppet-#{name}"
 end
 
+def githubsource(name, options=nil)
+  options ||= {}
+  options[:repo] ||= "boxen/puppet-#{name}"
+  mod name, :git => "git://github.com/#{options[:repo]}.git"
+end
+
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
@@ -56,20 +62,25 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "alfred",                        "1.1.2"
+github "alfred",                        "1.1.6"
 github "xquartz",                       "1.1.0"
-github "python",                        "1.2.1"
-github "chrome",                        "1.1.1"
-github "shortcat",                      "1.0.4"
+github "python",                        "1.3.0"
+github "chrome",                        "1.1.2"
+github "shortcat",                      "1.0.6"
 github "vim",                           "1.0.5"
-github "osx",                           "1.4.0"
+github "osx",                           "2.0.0"
 github "java",                          "1.1.2",	:repo => "boxen/puppet-java"
 github "android",                       "1.0.0"
-github "iterm2",                        "1.0.0"
+
+github "iterm2",                        "1.0.3"
 github "spotify",                       "1.0.1"
-github "ohmyzsh",                       "1.0.0",	:repo => "samjsharpe/puppet-ohmyzsh"
-github "keyremap4macbook",              "1.0.4"
-github "pckeyboardhack",                "1.0.2",	:repo => "smh/puppet-pckeyboardhack"
+github "keyremap4macbook",              "1.0.8"
+github "pckeyboardhack",                "1.0.8",	:repo => "smh/puppet-pckeyboardhack"
+github "dropbox", 			"1.1.2"
 github "property_list_key",             "0.1.0",	:repo => "glarizza/puppet-property_list_key"
-github "firefox", 			"1.1.1"
+github "firefox", 			"1.1.4"
 github "dockutil", 			"0.1.2"
+
+
+#Custom github sources
+githubsource "brewcask",                         :repo => "jalessio/puppet-brewcask"
