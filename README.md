@@ -77,8 +77,6 @@ My boxen project provides the following by default:
 We support binary packaging for everything in Homebrew, rbenv, and nvm.
 See `config/boxen.rb` for the environment variables to define.
 
-[Boxen config](config/boxen.rb).
-
 ## Halp!
 
 See [FAQ](https://github.com/boxen/our-boxen/blob/master/docs/faq.md).
