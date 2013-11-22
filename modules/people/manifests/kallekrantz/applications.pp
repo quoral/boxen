@@ -67,4 +67,7 @@ class people::kallekrantz::applications{
       provider => appdmg,
       ensure => installed
     }
+    include gdb
+    package{ 'mplayer':
+    provider => brew,}
 }

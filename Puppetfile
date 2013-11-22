@@ -80,7 +80,8 @@ github "dropbox", 			"1.1.2"
 github "property_list_key",             "0.1.0",	:repo => "glarizza/puppet-property_list_key"
 github "firefox", 			"1.1.4"
 github "dockutil", 			"0.1.2"
-
+github "gdb",                           "1.0.0"
 
 #Custom github sources
 githubsource "brewcask",                         :repo => "jalessio/puppet-brewcask"
+githubsource "fonts",                            :repo => "robbiegill/puppet-font"

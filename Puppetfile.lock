@@ -5,6 +5,13 @@ GIT
   specs:
     brewcask (0.0.1)
 
+GIT
+  remote: git://github.com/robbiegill/puppet-font.git
+  ref: master
+  sha: a9d9a3a237bbc4ecd64b191a4bdc039fe74333bd
+  specs:
+    fonts (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
@@ -54,6 +61,11 @@ GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
     gcc (2.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-gdb
+  specs:
+    gdb (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
@@ -190,8 +202,10 @@ DEPENDENCIES
   dockutil (= 0.1.2)
   dropbox (= 1.1.2)
   firefox (= 1.1.4)
+  fonts (>= 0)
   foreman (= 1.0.0)
   gcc (= 2.0.1)
+  gdb (= 1.0.0)
   git (= 1.2.5)
   go (= 1.0.0)
   homebrew (= 1.5.1)

@@ -25,13 +25,21 @@ class people::kallekrantz::osx{
         action  => "add",
         require => Class['spotify']
     }
-    dockutil::item { 'Add Emacs':
-      item => "/Application/Emacs.app",
-      label => "Emacs",
-      position => 2,
+    dockutil::item{ 'Add Viber':
+      item => "/Applications/Viber.app",
+      label => "Viber",
+      position => 5,
       action => "add",
-      require => Class[people::kallekrantz::applications::emacs]
+      require => Package['viber']
     }
+#    TODO This somehow doesn't work
+#    dockutil::item { 'Add Emacs':
+#      item => "/Application/Emacs.app",
+#      label => "Emacs",
+#      position => 2,
+#      action => "add",
+#      require => Class[people::kallekrantz::applications::emacs]
+#    }
 
     
     ## Remove the default applications in the dock  
@@ -120,4 +128,20 @@ class people::kallekrantz::osx{
         label   => "System Preferences",
         action => "remove",
     }
+    dockutil::item { 'Remove iPhoto':
+      item => "/Applications/iPhoto.app",
+      label => "iPhoto",
+      action => "remove"
+    }
+    dockutil::item { 'Remove iBooks':
+      item => "/Applications/iBooks.app",
+      label => "iBooks",
+      action => "remove"
+    }
+    dockutil::item { 'Remove Maps':
+      item => "/Applications/Maps.app",
+      label => "Maps",
+      action => "remove"
+    }
+    
 }
