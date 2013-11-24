@@ -17,9 +17,9 @@ class people::kallekrantz::login_items{
         hidden => true,
         require => Class['keyremap4macbook']
     }
-    osx_login_item{ 'Amethyst':
-        name    =>  "Amethyst",
-        path    =>  "/Applications/Amethyst.app",
+    osx_login_item{ 'Slate':
+        name    =>  "Slate",
+        path    =>  "/Applications/Slate.app",
         hidden  =>  true,
         require =>  Class[people::kallekrantz::windowmanager]
     }

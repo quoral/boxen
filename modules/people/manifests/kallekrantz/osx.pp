@@ -57,11 +57,11 @@ class people::kallekrantz::osx{
         action => "remove",
     }
 
-    dockutil::item { 'Remove Safari':
-        item => "/Applications/Safari.app",
-        label   => "Safari",
-        action => "remove",
-    }
+#    dockutil::item { 'Remove Safari':
+#        item => "/Applications/Safari.app",
+#        label   => "Safari",
+#        action => "remove",
+#    }
 
     dockutil::item { 'Remove Mail':
         item => "/Applications/Mail.app",
