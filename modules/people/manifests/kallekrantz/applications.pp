@@ -67,6 +67,11 @@ class people::kallekrantz::applications{
       provider => appdmg,
       ensure => installed
     }
+    package{ 'vlc' : 
+      provider => brewcask,
+      ensure => installed
+    }
     include gdb
     package{ 'mplayer':}
+    package{ 'unrar':}
 }
