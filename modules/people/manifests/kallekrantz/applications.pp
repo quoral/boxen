@@ -6,7 +6,6 @@ class people::kallekrantz::applications{
     include chrome::canary
     include chrome
     include alfred
-    include shortcat
     include java
     include android::sdk
     include android::platform_tools
@@ -14,7 +13,6 @@ class people::kallekrantz::applications{
     include spotify
     include firefox
     class fishshell{ #Horribly bloated way of doing this. May get around to do a proper boxen thingy later.
-      
         exec { 'curl http://fishshell.com/files/2.0.0/fish.pkg -o /var/tmp/fish.pkg':
             creates => '/var/tmp/fish.pkg'
         }
