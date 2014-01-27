@@ -63,7 +63,7 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # node versions
+  # node version
   include nodejs
 
   # default ruby versions

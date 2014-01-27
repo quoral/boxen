@@ -29,10 +29,4 @@ class people::kallekrantz::login_items{
         hidden  =>  true,
         require =>  Class[people::kallekrantz::windowmanager]
     }
-    osx_login_item{ 'Shortcat':
-        name => "Shortcat",
-        path => "/Applications/Shortcat.app",
-        hidden => true,
-        require => Class['shortcat']
-    }
 }
