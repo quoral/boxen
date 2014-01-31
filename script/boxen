@@ -76,7 +76,7 @@ load "config/basic.rb"
 require "boxen/cli"
 
 # Okay, let's run this thing.
-
-load "script/fish_generator"
+# Nope, not anymore
+# load "script/fish_generator"
 
 exit Boxen::CLI.run ARGV

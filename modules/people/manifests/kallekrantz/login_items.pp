@@ -5,18 +5,6 @@ class people::kallekrantz::login_items{
         hidden => true,
         require => Class['alfred']
     }
-    osx_login_item{ 'PCRemap4Macbook':
-        name => "PCKeyboardHack",
-        path => "/Applications/PCKeyboardHack.app",
-        hidden => true,
-        require => Class['pckeyboardhack']
-    }
-    osx_login_item{ 'KeyRemap4MacBook':
-        name => "KeyRemap4MacBook",
-        path => "/Applications/KeyRemap4MacBook.app",
-        hidden => true,
-        require => Class['keyremap4macbook']
-    }
     osx_login_item{ 'Slate':
         name    =>  "Slate",
         path    =>  "/Applications/Slate.app",

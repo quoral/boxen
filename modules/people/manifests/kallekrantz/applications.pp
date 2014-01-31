@@ -12,8 +12,10 @@ class people::kallekrantz::applications{
   include iterm2::dev
   include spotify
   include firefox
-  include postgresql
-  postgresql::db{ 'SpitfireDB':}
+  #Is not needed currently
+  # include postgresql
+  #postgresql::db{ 'SpitfireDB':}
+
   class fishshell{ #Horribly bloated way of doing this. May get around to do a proper boxen thingy later.
     exec { 'curl http://fishshell.com/files/2.0.0/fish.pkg -o /var/tmp/fish.pkg':
       creates => '/var/tmp/fish.pkg'
@@ -74,4 +76,5 @@ class people::kallekrantz::applications{
   include gdb
   package{ 'mplayer':}
   package{ 'unrar':}
+  package{ 'cmake':}
 }

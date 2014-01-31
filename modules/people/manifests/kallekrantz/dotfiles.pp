@@ -49,12 +49,12 @@ class people::kallekrantz::dotfiles{
     }
 
     #Some ugly shit for getting the configs in the right place
-    file { "${home}/Library/Application Support/KeyRemap4Macbook/":
-      ensure => "directory",
-    }
-    file { "${home}/Library/Application Support/KeyRemap4Macbook/private.xml":
-      ensure => link,
-      target => "${dotfiles_dir}/configs/private.xml",
-      require => Repository[$dotfiles_dir],
-    }
+#    file { "${home}/Library/Application Support/KeyRemap4Macbook/":
+#      ensure => "directory",
+#    }
+#    file { "${home}/Library/Application Support/KeyRemap4Macbook/private.xml":
+#      ensure => link,
+#      target => "${dotfiles_dir}/configs/private.xml",
+#      require => Repository[$dotfiles_dir],
+#    }
 }
