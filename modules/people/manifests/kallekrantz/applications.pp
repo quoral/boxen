@@ -64,11 +64,11 @@ class people::kallekrantz::applications{
     }
   }
   include vcprompt
-  package{ 'viber':
-    source => "http://download.viber.com/desktop/mac/Viber.dmg",
-    provider => appdmg,
-    ensure => installed
-  }
+#  package{ 'viber':
+#    source => "http://download.viber.com/desktop/mac/Viber.dmg",
+#    provider => appdmg,
+#    ensure => installed
+#  }
   package{ 'vlc' : 
     provider => brewcask,
     ensure => installed
