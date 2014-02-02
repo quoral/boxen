@@ -25,13 +25,6 @@ class people::kallekrantz::osx{
         action  => "add",
         require => Class['spotify']
     }
-#    dockutil::item{ 'Add Viber':
-#      item => "/Applications/Viber.app",
-#      label => "Viber",
-#      position => 5,
-#      action => "add",
-#      require => Package['viber']
-#    }
 #    TODO This somehow doesn't work
 #    dockutil::item { 'Add Emacs':
 #      item => "/Application/Emacs.app",
