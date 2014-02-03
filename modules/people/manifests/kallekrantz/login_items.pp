@@ -7,7 +7,7 @@ class people::kallekrantz::login_items{
     }
     osx_login_item{ 'Slate':
         name    =>  "Slate",
-        path    =>  "/Applications/Slate.app",
+        path    =>  "/Users/${boxen_user}/Applications/Slate.app",
         hidden  =>  true,
         require =>  Class[people::kallekrantz::windowmanager]
     }

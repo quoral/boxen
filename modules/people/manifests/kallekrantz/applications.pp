@@ -1,5 +1,6 @@
 class people::kallekrantz::applications{
   include alfred
+  include skype
   include dropbox
   include python
   include brewcask
