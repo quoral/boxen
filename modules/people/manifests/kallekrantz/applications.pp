@@ -13,6 +13,7 @@ class people::kallekrantz::applications{
   include iterm2::dev
   include spotify
   include firefox
+  include virtualbox
   #Is not needed currently
   # include postgresql
   #postgresql::db{ 'SpitfireDB':}

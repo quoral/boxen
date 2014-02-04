@@ -173,6 +173,11 @@ GITHUBTARBALL
     vim (1.0.5)
 
 GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.10)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.1)
@@ -230,5 +235,6 @@ DEPENDENCIES
   sudo (= 1.0.0)
   sysctl (= 1.0.0)
   vim (= 1.0.5)
+  virtualbox (= 1.0.10)
   xquartz (= 1.1.1)
 

@@ -79,6 +79,8 @@ github "dockutil", 			"0.1.2"
 github "gdb",                           "1.0.0"
 github "postgresql",                    "3.0.1"
 github "skype",                         "1.0.8"
+github "virtualbox",                    "1.0.10"
+
 
 #Custom github sources
 githubsource "brewcask",                         :repo => "jalessio/puppet-brewcask"
