@@ -35,7 +35,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.3.4"
+github "boxen", "3.3.8"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -43,7 +43,7 @@ github "boxen", "3.3.4"
 github "dnsmasq",    "1.0.1"
 github "foreman",    "1.0.0"
 github "gcc",        "2.0.1"
-github "git",        "1.2.5"
+github "git",        "1.3.7"
 github "go",         "1.0.0"
 github "homebrew",   "1.5.1"
 github "hub",        "1.0.3"
@@ -70,11 +70,11 @@ github "vim",                           "1.0.5"
 github "osx",                           "2.2.2"
 github "java",                          "1.2.0"
 github "android",                       "1.1.0"
-github "iterm2",                        "1.0.6"
+github "iterm2",                        "1.0.7"
 github "spotify",                       "1.0.1"
 github "dropbox", 			"1.2.0"
 github "property_list_key",             "0.2.0",	:repo => "glarizza/puppet-property_list_key"
-github "firefox", 			"1.1.7"
+github "firefox", 			"1.1.8"
 github "dockutil", 			"0.1.2"
 github "gdb",                           "1.0.0"
 github "postgresql",                    "3.0.1"
