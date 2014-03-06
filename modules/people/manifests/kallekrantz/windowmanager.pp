@@ -3,8 +3,4 @@ class people::kallekrantz::windowmanager{
     provider => 'brewcask',
     require => Class['brewcask']
   }
-  package { 'slate': 
-    provider => 'brewcask',
-    require => Class['brewcask']
-  }
 }

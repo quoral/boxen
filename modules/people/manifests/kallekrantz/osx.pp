@@ -3,11 +3,11 @@ class people::kallekrantz::osx{
     include dockutil
 
     dockutil::item{ 'Add Chrome':
-        item    => "/Applications/Google Chrome.app",
+        item    => "/Applications/Google Chrome Canary.app",
         label   => "Google Chrome",
         position => 1,
         action  => "add",
-        require => Class['chrome']
+        require => Class['chrome::canary']
     }
  
     dockutil::item { 'Add iTerm':
@@ -18,6 +18,14 @@ class people::kallekrantz::osx{
         require  => Class['iterm2::dev'],
     }
 
+    dockutil::item { 'Add Sublime':
+        item    => "/Applications/Sublime Text.app",
+        label   => "Sublime Text", 
+        position => 4,
+        action  => "add",
+        require => Class['sublime_text_3']
+    }
+
     dockutil::item { 'Add Spotify':
         item    => "/Applications/Spotify.app",
         label   => "Spotify", 
@@ -25,15 +33,6 @@ class people::kallekrantz::osx{
         action  => "add",
         require => Class['spotify']
     }
-#    TODO This somehow doesn't work
-#    dockutil::item { 'Add Emacs':
-#      item => "/Application/Emacs.app",
-#      label => "Emacs",
-#      position => 2,
-#      action => "add",
-#      require => Class[people::kallekrantz::applications::emacs]
-#    }
-
     
     ## Remove the default applications in the dock  
     
@@ -49,12 +48,6 @@ class people::kallekrantz::osx{
         label   => "Mission Control",
         action => "remove",
     }
-
-#    dockutil::item { 'Remove Safari':
-#        item => "/Applications/Safari.app",
-#        label   => "Safari",
-#        action => "remove",
-#    }
 
     dockutil::item { 'Remove Mail':
         item => "/Applications/Mail.app",

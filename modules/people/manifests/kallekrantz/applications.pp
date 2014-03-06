@@ -5,7 +5,6 @@ class people::kallekrantz::applications{
   include python
   include brewcask
   include chrome::canary
-  include chrome
   include alfred
   include java
   include android::sdk
@@ -38,6 +37,11 @@ class people::kallekrantz::applications{
     }
   }
   include fishshell
+
+  #Editor stuff
+
+  include sublime_text_3
+  include sublime_text_3::package_control
   #I want to do this curl -s http://emacsformacosx.com/atom/daily | head -c 1000 | grep 'dmg\"/>$' | tail -c 87 | head -c 83 | xargs wget -O Emacs.dmg
   class emacs{ #I silently hate myself forever
     $emacs_version = 'Emacs-2013-08-08-113753-universal-10.6.8' 
@@ -65,6 +69,7 @@ class people::kallekrantz::applications{
       require => Exec[$command]
     }
   }
+
   include vcprompt
   package{ 'viber':
     source => "http://download.viber.com/desktop/mac/Viber.dmg",
@@ -76,7 +81,8 @@ class people::kallekrantz::applications{
     ensure => installed
   }
   include gdb
-  package{ 'mplayer':}
-  package{ 'unrar':}
-  package{ 'cmake':}
+  package{ 'gcc49': }
+  package{ 'mplayer': }
+  package{ 'unrar': }
+  package{ 'cmake': }
 }

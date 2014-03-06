@@ -41,6 +41,11 @@ class people::kallekrantz::dotfiles{
       target  => "${dotfiles_dir}/slate.js",
       require => Repository[$dotfiles_dir]
     }
+    file { "${home}/.amethyst":
+    ensure => link,
+    target => "${dotfiles_dir}/amethyst",
+    require => Repository[$dotfiles_dir]
+    }
     
     file { "${home}/.config":
       ensure  => link,

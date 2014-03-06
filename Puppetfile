@@ -80,7 +80,7 @@ github "gdb",                           "1.0.0"
 github "postgresql",                    "3.0.1"
 github "skype",                         "1.0.8"
 github "virtualbox",                    "1.0.10"
-
+github "sublime_text_3",                "1.0.2",        :repo => "jozefizso/puppet-sublime_text_3"
 
 #Custom github sources
 githubsource "brewcask",                         :repo => "jalessio/puppet-brewcask"
