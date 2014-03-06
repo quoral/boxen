@@ -58,19 +58,11 @@ repositories easily.
 
 Once you've done that, you can run the following to bootstrap
 your boxen:
->>>>>>> a4304d4da64ee750d17c6c6f00fd22214b0bd793
 
 ```
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
-<<<<<<< HEAD
-git clone https://github.com/schwomp/boxen.git /opt/boxen/repo
-=======
-git clone https://github.com/boxen/our-boxen /opt/boxen/repo
-cd /opt/boxen/repo
-git remote rm origin
-git remote add origin <the location of my new git repository>
-git push -u origin master
+git clone https://github.com/kallekrantz/boxen.git /opt/boxen/repo
 ```
 
 Now that your boxen is bootstrapped, you can run the following to
