@@ -13,6 +13,8 @@ class people::kallekrantz::applications{
   include spotify
   include firefox
   include virtualbox
+  package{'node':}
+  package{'phantomjs':}
   #Is not needed currently
   # include postgresql
   #postgresql::db{ 'SpitfireDB':}
@@ -44,7 +46,7 @@ class people::kallekrantz::applications{
   include sublime_text_3::package_control
   #I want to do this curl -s http://emacsformacosx.com/atom/daily | head -c 1000 | grep 'dmg\"/>$' | tail -c 87 | head -c 83 | xargs wget -O Emacs.dmg
   class emacs{ #I silently hate myself forever
-    $emacs_version = 'Emacs-2013-08-08-113753-universal-10.6.8' 
+    $emacs_version = 'Emacs-2013-08-08-113753-universal-10.6.8'
     package{ 'emacs.app':
       source => "http://emacsformacosx.com/emacs-builds/${emacs_version}.dmg",
       provider => appdmg,
@@ -59,7 +61,7 @@ class people::kallekrantz::applications{
     file{ "/Users/${boxen_user}/bin":
       ensure => directory,
     }
-    $command ="curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > /Users/${boxen_user}/bin/vcprompt" 
+    $command ="curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > /Users/${boxen_user}/bin/vcprompt"
     exec{$command:
       creates => "/Users/${boxen_user}/bin/vcprompt",
       require => File["/Users/${boxen_user}/bin"]
@@ -76,7 +78,7 @@ class people::kallekrantz::applications{
     provider => appdmg,
     ensure => installed
   }
-  package{ 'vlc' : 
+  package{ 'vlc' :
     provider => brewcask,
     ensure => installed
   }
