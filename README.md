@@ -86,6 +86,25 @@ ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/
 You can also skip the above steps and <a href="#customizing">customize your
 boxen</a> before installing it.
 
+### Distributing
+
+That's enough to get your boxen into a usable state on other machines,
+usually.
+From there, we recommend setting up
+[boxen-web](https://github.com/boxen/boxen-web)
+as an easy way to automate letting other folks install your boxen.
+
+If you _don't_ want to use boxen-web, folks can get using your boxen like so:
+
+```
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone <location of my new git repository> /opt/boxen/repo
+cd /opt/boxen/repo
+./script/boxen
+```
+
+>>>>>>> upstreams/master
 Keep in mind this requires you to encrypt your hard drive by default.
 If you do not want to do encrypt your hard drive, you can use the `--no-fde`.
 
