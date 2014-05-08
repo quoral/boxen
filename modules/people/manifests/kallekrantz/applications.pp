@@ -83,7 +83,9 @@ class people::kallekrantz::applications{
     ensure => installed
   }
   include gdb
-  package{ 'gcc49': }
+  # Some other package is apparantly trying to install gcc-4.8
+  # Will need to investigate further - gcc49 > gcc48
+  # package{ 'gcc49': }
   package{ 'mplayer': }
   package{ 'unrar': }
   package{ 'cmake': }
