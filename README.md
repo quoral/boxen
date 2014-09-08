@@ -276,6 +276,27 @@ will be working in).
 We support binary packaging for everything in Homebrew, rbenv, and nvm.
 See `config/boxen.rb` for the environment variables to define.
 
+## Sharing Boxen Modules
+
+If you've got a Boxen module you'd like to be grouped under the Boxen org,
+(so it can easily be found by others), please file an issue on this
+repository with a link to your module.
+We'll review the code briefly, and if things look pretty all right,
+we'll fork it under the Boxen org and give you read+write access to our
+fork.
+You'll still be the maintainer, you'll still own the issues and PRs.
+It'll just be listed under the boxen org so folks can find it more easily.
+
+##upgrading boxen
+See [FAQ-Upgrading](https://github.com/boxen/our-boxen/blob/master/docs/faq.md#q-how-do-you-upgrade-your-boxen-from-the-public-our-boxen).
+
+## Integrating with Github Enterprise
+
+If you're using a Github Enterprise instance rather than github.com,
+you will need to set the `BOXEN_GITHUB_ENTERPRISE_URL` and
+`BOXEN_REPO_URL_TEMPLATE` variables in your
+[Boxen config](config/boxen.rb).
+
 ## Halp!
 
 See [FAQ](https://github.com/boxen/our-boxen/blob/master/docs/faq.md).
