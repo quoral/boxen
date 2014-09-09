@@ -13,6 +13,7 @@ class people::kallekrantz::applications{
   include spotify
   include firefox
   include virtualbox
+  include atom
   package{'node':}
   package{'phantomjs':}
   #Is not needed currently
@@ -71,7 +72,7 @@ class people::kallekrantz::applications{
       require => Exec[$command]
     }
   }
-
+  include fonts
   include vcprompt
   package{ 'viber':
     source => "http://download.viber.com/desktop/mac/Viber.dmg",

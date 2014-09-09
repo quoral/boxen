@@ -1,4 +1,4 @@
-class people::kallekrantz::osx{    
+class people::kallekrantz::osx{
 
     include dockutil
 
@@ -9,7 +9,7 @@ class people::kallekrantz::osx{
         action  => "add",
         require => Class['chrome::canary']
     }
- 
+
     dockutil::item { 'Add iTerm':
         item     => "/Applications/iTerm.app",
         label    => "iTerm",
@@ -18,24 +18,24 @@ class people::kallekrantz::osx{
         require  => Class['iterm2::dev'],
     }
 
-    dockutil::item { 'Add Sublime':
-        item    => "/Applications/Sublime Text.app",
-        label   => "Sublime Text", 
+    dockutil::item { 'Add Atom':
+        item    => "/Applications/Atom.app",
+        label   => "Atom",
         position => 4,
         action  => "add",
-        require => Class['sublime_text_3']
+        require => Class['atom']
     }
 
     dockutil::item { 'Add Spotify':
         item    => "/Applications/Spotify.app",
-        label   => "Spotify", 
-        position => 4,
+        label   => "Spotify",
+        position => 5,
         action  => "add",
         require => Class['spotify']
     }
-    
-    ## Remove the default applications in the dock  
-    
+
+    ## Remove the default applications in the dock
+
     dockutil::item { 'Remove Launchpad':
         item    => "/Applications/Launchpad.app",
         label   => "Launchpad",
@@ -129,5 +129,5 @@ class people::kallekrantz::osx{
       label => "Maps",
       action => "remove"
     }
-    
+
 }
