@@ -14,6 +14,14 @@ class people::kallekrantz::applications{
   include firefox
   include virtualbox
   include atom
+  include silverlight
+  include onyx
+  include wkhtmltopdf
+
+  class { 'intellij':
+    edition => 'ultimate',
+  }
+
   package{'node':}
   package{'phantomjs':}
   #Is not needed currently
