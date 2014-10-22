@@ -124,6 +124,11 @@ GITHUBTARBALL
     osx (2.7.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-packer
+  specs:
+    packer (1.3.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (2.3.0)
@@ -182,6 +187,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sysctl
   specs:
     sysctl (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vagrant
+  specs:
+    vagrant (3.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-vim
@@ -262,6 +272,7 @@ DEPENDENCIES
   onyx (= 1.2.0)
   openssl (= 1.0.0)
   osx (= 2.7.1)
+  packer (= 1.3.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
   postgresql (= 3.0.1)
@@ -277,6 +288,7 @@ DEPENDENCIES
   sublime_text_3 (= 1.0.3)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)
+  vagrant (= 3.2.0)
   vim (= 1.0.5)
   virtualbox (= 1.0.13)
   wkhtmltopdf (= 1.2.1)

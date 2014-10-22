@@ -13,6 +13,8 @@ class people::kallekrantz::applications{
   include spotify
   include firefox
   include virtualbox
+  include packer
+  include vagrant
   include atom
   include silverlight
   include onyx
