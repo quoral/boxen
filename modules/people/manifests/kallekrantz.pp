@@ -6,4 +6,5 @@ class people::kallekrantz {
   include people::kallekrantz::login_items
   include people::kallekrantz::osx_defaults
   include people::kallekrantz::configs
+  include people::kallekrantz::my_modern_space_cadet
 }

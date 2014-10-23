@@ -10,6 +10,7 @@ class people::kallekrantz::applications{
   include android::sdk
   include android::platform_tools
   include iterm2::dev
+  include iterm2::colors::zenburn
   include spotify
   include firefox
   include virtualbox

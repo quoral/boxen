@@ -30,7 +30,7 @@ class people::kallekrantz::dotfiles{
       ensure  => link,
       target  => "${dotfiles_dir}/vimrc",
       require => Repository[$dotfiles_dir]
-    } 
+    }
     file { "${home}/.slate":
       ensure  => link,
       target  => "${dotfiles_dir}/slate",
@@ -46,11 +46,11 @@ class people::kallekrantz::dotfiles{
     target => "${dotfiles_dir}/amethyst",
     require => Repository[$dotfiles_dir]
     }
-    
+
     file { "${home}/.config":
       ensure  => link,
       target  => "${dotfiles_dir}/config",
-      require => Repository[$dotfiles_dir] 
+      require => Repository[$dotfiles_dir]
     }
 
     #Some ugly shit for getting the configs in the right place

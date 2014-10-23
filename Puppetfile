@@ -35,7 +35,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.6.2"
+github "boxen", "3.7.0"
 
 # Support for default hiera data in modules
 
@@ -44,12 +44,12 @@ github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "dnsmasq",     "1.1.0"
+github "dnsmasq",     "2.0.0"
 github "foreman",     "1.2.0"
-github "gcc",         "2.1.1"
+github "gcc",         "2.2.0"
 github "git",         "2.6.0"
 github "go",          "2.1.0"
-github "homebrew",    "1.9.4"
+github "homebrew",    "1.9.5"
 github "hub",         "1.3.0"
 github "inifile",     "1.1.3", :repo => "puppetlabs/puppetlabs-inifile"
 github "nginx",       "1.4.3"
@@ -58,27 +58,27 @@ github "openssl",     "1.0.0"
 github "phantomjs",   "2.3.0"
 github "pkgconfig",   "1.0.0"
 github "repository",  "2.3.0"
-github "ruby",        "8.1.3"
+github "ruby",        "8.1.4"
 github "stdlib",      "4.3.2", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
-github "xquartz",     "1.2.0"
+github "xquartz",     "1.2.1"
 github "sysctl",      "1.0.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
 github "alfred",                        "1.3.1"
-github "python",                        "1.3.0"
+github "python",                        "2.0.0"
 github "chrome",                        "1.2.0"
 github "vim",                           "1.0.5"
 github "osx",                           "2.7.1"
-github "java",                          "1.7.0"
+github "java",                          "1.7.1"
 github "android",                       "1.3.0"
-github "iterm2",                        "1.2.0"
+github "iterm2",                        "1.2.2"
 github "spotify",                       "1.0.2"
-github "dropbox",                       "1.4.0"
+github "dropbox",                       "1.4.1"
 github "property_list_key",             "0.2.1",	:repo => "glarizza/puppet-property_list_key"
-github "firefox",                       "1.2.2"
+github "firefox",                       "1.2.3"
 github "dockutil",                      "0.2.1"
 github "silverlight",                   "1.0.1"
 github "gdb",                           "1.0.0"
@@ -88,10 +88,12 @@ github "skype",                         "1.0.9"
 github "intellij",                      "1.5.1"
 github "onyx",                          "1.2.0"
 github "wkhtmltopdf",                   "1.2.1"
-github "qt",                            "1.3.1"
+github "qt",                            "1.4.0"
 github "virtualbox",                    "1.0.13"
 github "sublime_text_3",                "1.0.3",  :repo => "jozefizso/puppet-sublime_text_3"
 github "brewcask",                      "0.0.4",  :repo => "phinze/puppet-brewcask"
 github "fonts",                         "0.0.3"
 github "vagrant",                       "3.2.0"
 github "packer",                        "1.3.0"
+github "seil",                          "1.0.2"
+github "karabiner",                     "1.0.6"
