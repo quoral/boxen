@@ -26,26 +26,15 @@ class people::kallekrantz::applications{
 
   package{'node':}
   package{'phantomjs':}
-  #Is not needed currently
-  # include postgresql
-  #postgresql::db{ 'SpitfireDB':}
-
   class fishshell{ #Horribly bloated way of doing this. May get around to do a proper boxen thingy later.
-    exec { 'curl http://fishshell.com/files/2.0.0/fish.pkg -o /var/tmp/fish.pkg':
-      creates => '/var/tmp/fish.pkg'
-    }
-    package{ 'fishshell':
-      source      =>  '/var/tmp/fish.pkg',
-      provider    =>  apple,
-      ensure      =>  installed
-    }
+    package{"fish":}
     file_line { 'add fishshell to /etc/shells':
       path    => '/etc/shells',
-      line    => "/usr/local/bin/fish",
-      require => Package['fishshell'],
+      line    => "${boxen::config::homebrewdir}/bin/fish",
+      require => Package['fish'],
     }
     osx_chsh{ $::luser:
-      shell => "/usr/local/bin/fish",
+      shell => "${boxen::config::homebrewdir}/bin/fish",
       require => File_line['add fishshell to /etc/shells'],
     }
   }
@@ -84,11 +73,7 @@ class people::kallekrantz::applications{
   }
   include fonts
   include vcprompt
-  package{ 'viber':
-    source => "http://download.viber.com/desktop/mac/Viber.dmg",
-    provider => appdmg,
-    ensure => installed
-  }
+
   package{ 'vlc' :
     provider => brewcask,
     ensure => installed

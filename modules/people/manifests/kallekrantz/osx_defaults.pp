@@ -11,4 +11,9 @@ class people::kallekrantz::osx_defaults {
   class { 'osx::sound::interface_sound_effects':
     enable => false
   }
+
+  class { 'boxen::security':
+      require_password => true,
+      screensaver_delay_sec => 0
+  }
 }
