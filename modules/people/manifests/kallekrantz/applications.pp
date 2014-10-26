@@ -5,7 +5,6 @@ class people::kallekrantz::applications{
   include python
   include brewcask
   include chrome::canary
-  include alfred
   include java
   include android::sdk
   include android::platform_tools

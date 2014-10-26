@@ -4,9 +4,9 @@ GEM
     CFPropertyList (2.2.8)
     addressable (2.3.6)
     ansi (1.4.3)
-    aws-sdk (1.56.0)
-      aws-sdk-v1 (= 1.56.0)
-    aws-sdk-v1 (1.56.0)
+    aws-sdk (1.57.0)
+      aws-sdk-v1 (= 1.57.0)
+    aws-sdk-v1 (1.57.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     boxen (2.7.0)
@@ -85,6 +85,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  CFPropertyList (>= 2.2.6)
   aws-sdk (~> 1.42)
   boxen (~> 2.7.0)
   deep_merge (~> 1.0)

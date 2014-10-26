@@ -2,6 +2,9 @@ class people::kallekrantz::dotfiles{
     $home = "/Users/${::boxen_user}"
     $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
     $emacs_dir = "${boxen::config::srcdir}/emacs.d"
+
+    require applications
+
     repository { $emacs_dir:
       source => "${::github_login}/emacs.d"
     }
@@ -53,6 +56,28 @@ class people::kallekrantz::dotfiles{
       require => Repository[$dotfiles_dir]
     }
 
+    $alfredPreferenceLocation = "${home}/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist"
+    property_list_key { 'alfred_hotkey':
+      ensure     => present,
+      require    => Repository[$dotfiles_dir],
+      path       => $alfredPreferenceLocation,
+      key        => 'hotkey.default',
+      value      => {
+                      'key' => 49,
+                      'mod' => 524288,
+                      'string' => "Space"
+                    },
+      value_type => 'hash'
+    }
+
+    property_list_key { 'alfred_folder':
+      ensure     => present,
+      require    => Repository[$dotfiles_dir],
+      path       => $alfredPreferenceLocation,
+      key        => 'syncfolder',
+      value      => "${dotfiles_dir}/configs/alfred/",
+      value_type => 'string'
+    }
     #Some ugly shit for getting the configs in the right place
 #    file { "${home}/Library/Application Support/KeyRemap4Macbook/":
 #      ensure => "directory",
