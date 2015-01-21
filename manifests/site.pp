@@ -71,6 +71,9 @@ node default {
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
+  # Make sure homebrew cask is initialized
+  include brewcask
+
   # common, useful packages
   package {
     [
