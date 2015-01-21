@@ -44,19 +44,14 @@ class people::kallekrantz::applications{
 
   include sublime_text_3
   include sublime_text_3::package_control
-  #I want to do this curl -s http://emacsformacosx.com/atom/daily | head -c 1000 | grep 'dmg\"/>$' | tail -c 87 | head -c 83 | xargs wget -O Emacs.dmg
-  class emacs{ #I silently hate myself forever
-    $emacs_version = 'Emacs-2013-08-08-113753-universal-10.6.8'
-    package{ 'emacs.app':
-      source => "http://emacsformacosx.com/emacs-builds/${emacs_version}.dmg",
-      provider => appdmg,
-      ensure => installed
-    }
-    package{'emacs':
-      ensure => installed,
-    }
+
+  package { 'emacs':
+    ensure => present,
+    install_options => [
+      '--cocoa',
+      '--HEAD'
+    ]
   }
-  include emacs
   class vcprompt{
     file{ "/Users/${boxen_user}/bin":
       ensure => directory,
@@ -79,10 +74,9 @@ class people::kallekrantz::applications{
     ensure => installed
   }
   include gdb
-  # Some other package is apparantly trying to install gcc-4.8
-  # Will need to investigate further - gcc49 > gcc48
-  # package{ 'gcc49': }
+  package{ 'gcc49': }
   package{ 'mplayer': }
   package{ 'unrar': }
   package{ 'cmake': }
+  package{ 'ctags': }
 }
