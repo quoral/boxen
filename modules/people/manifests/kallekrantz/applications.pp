@@ -15,14 +15,9 @@ class people::kallekrantz::applications{
   include virtualbox
   include packer
   include vagrant
-  include atom
   include silverlight
   include onyx
   include wkhtmltopdf
-
-  class { 'intellij':
-    edition => 'ultimate',
-  }
 
   package{'node':}
   package{'phantomjs':}
@@ -46,12 +41,17 @@ class people::kallekrantz::applications{
   include sublime_text_3::package_control
 
   package { 'emacs':
-    ensure => present,
     install_options => [
       '--cocoa',
       '--HEAD'
     ]
   }
+  
+  exec { "brew linkapps emacs":
+   creates => "/Applications/Emacs.app",
+   require => Package["emacs"]
+  }
+  
   class vcprompt{
     file{ "/Users/${boxen_user}/bin":
       ensure => directory,

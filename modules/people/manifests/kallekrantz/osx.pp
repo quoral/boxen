@@ -18,14 +18,6 @@ class people::kallekrantz::osx{
         require  => Class['iterm2::dev'],
     }
 
-    dockutil::item { 'Add Atom':
-        item    => "/Applications/Atom.app",
-        label   => "Atom",
-        position => 4,
-        action  => "add",
-        require => Class['atom']
-    }
-
     dockutil::item { 'Add Spotify':
         item    => "/Applications/Spotify.app",
         label   => "Spotify",
