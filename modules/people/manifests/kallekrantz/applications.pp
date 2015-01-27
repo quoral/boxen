@@ -21,20 +21,11 @@ class people::kallekrantz::applications{
 
   package{'node':}
   package{'phantomjs':}
-  class fishshell{ #Horribly bloated way of doing this. May get around to do a proper boxen thingy later.
-    package{"fish":}
-    file_line { 'add fishshell to /etc/shells':
-      path    => '/etc/shells',
-      line    => "${boxen::config::homebrewdir}/bin/fish",
-      require => Package['fish'],
-    }
-    osx_chsh{ $::luser:
-      shell => "${boxen::config::homebrewdir}/bin/fish",
-      require => File_line['add fishshell to /etc/shells'],
-    }
-  }
-  include fishshell
 
+  #Shell stuff
+  include zsh
+  include ohmyzsh
+  
   #Editor stuff
 
   include sublime_text_3

@@ -1,4 +1,4 @@
- # This file manages Puppet module dependencies.
+# This file manages Puppet module dependencies.
 #
 # It works a lot like Bundler. We provide some core modules by
 # default. This ensures at least the ability to construct a basic
@@ -90,7 +90,9 @@ github "intellij",                      "1.5.1"
 github "onyx",                          "1.2.0"
 github "wkhtmltopdf",                   "1.2.1"
 github "virtualbox",                    "1.0.13"
-github "qt",				"1.4.0"
+github "qt",				            "1.4.0"
+github "zsh",                           "1.0.0"
+github "ohmyzsh",                       "1.0.0",  :repo => "erivello/puppet-ohmyzsh"
 github "sublime_text_3",                "1.0.3",  :repo => "jozefizso/puppet-sublime_text_3"
 github "fonts",                         "0.0.3"
 github "vagrant",                       "3.2.2"

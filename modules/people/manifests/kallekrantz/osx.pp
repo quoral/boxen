@@ -41,21 +41,10 @@ class people::kallekrantz::osx{
         action => "remove",
     }
 
-    dockutil::item { 'Remove Mail':
-        item => "/Applications/Mail.app",
-        label   => "Mail",
-        action => "remove",
-    }
 
     dockutil::item { 'Remove Contacts':
         item => "/Applications/Contacts.app",
         label   => "Contacts",
-        action => "remove",
-    }
-
-    dockutil::item { 'Remove Calendar':
-        item => "/Applications/Calendar.app",
-        label   => "Calendar",
         action => "remove",
     }
 

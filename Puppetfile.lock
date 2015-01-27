@@ -229,6 +229,16 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-zsh
+  specs:
+    zsh (1.0.0)
+
+GITHUBTARBALL
+  remote: erivello/puppet-ohmyzsh
+  specs:
+    ohmyzsh (1.0.0)
+
+GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
   specs:
     property_list_key (0.2.1)
@@ -280,6 +290,7 @@ DEPENDENCIES
   module_data (= 0.0.3)
   nginx (= 1.4.4)
   nodejs (= 4.0.0)
+  ohmyzsh (= 1.0.0)
   onyx (= 1.2.0)
   openssl (= 1.0.0)
   osx (= 2.8.0)
@@ -305,4 +316,5 @@ DEPENDENCIES
   virtualbox (= 1.0.13)
   wkhtmltopdf (= 1.2.1)
   xquartz (= 1.2.1)
+  zsh (= 1.0.0)
 
