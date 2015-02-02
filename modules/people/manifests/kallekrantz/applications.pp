@@ -8,6 +8,7 @@ class people::kallekrantz::applications{
   include java
   include android::sdk
   include android::platform_tools
+  include android::ndk
   include iterm2::dev
   include iterm2::colors::zenburn
   include spotify
