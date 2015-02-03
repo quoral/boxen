@@ -25,7 +25,10 @@ class people::kallekrantz::applications{
 
   #Shell stuff
   include zsh
-  include ohmyzsh
+  repository { "/Users/${boxen_user}/.antigen":
+    source => "zsh-users/antigen",
+    provider => 'git'
+  }
   
   #Editor stuff
 
