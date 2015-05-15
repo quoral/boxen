@@ -7,7 +7,10 @@ class people::kallekrantz::applications{
   include chrome::canary
   include java
   include android::sdk
+  include android::tools
   include android::platform_tools
+  android::build_tools { '18.1.2': }
+
   include android::ndk
   include iterm2::dev
   include iterm2::colors::zenburn
@@ -22,7 +25,13 @@ class people::kallekrantz::applications{
 
   package{'node':}
   package{'phantomjs':}
-
+  package{'llvm':
+    install_options => [
+                        "--with-clang",
+                        "--with-lldb"
+                        ]
+  }
+  
   #Shell stuff
   include zsh
   repository { "/Users/${boxen_user}/.antigen":
