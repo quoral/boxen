@@ -1,6 +1,7 @@
 class people::kallekrantz::windowmanager{
-  package { 'amethyst':
-    provider => 'brewcask',
-    require => Class['brewcask']
+      
+  package{ 'mattr-slate':
+      provider => brewcask,
+      ensure => installed
   }
 }

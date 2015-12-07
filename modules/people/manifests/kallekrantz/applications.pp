@@ -73,14 +73,18 @@ class people::kallekrantz::applications{
   include fonts
   include vcprompt
 
-  package{ 'vlc' :
+  package{ ['vlc', 'istat-menus'] :
     provider => brewcask,
     ensure => installed
   }
+
   include gdb
+
   package{ 'gcc49': }
+  package{ 'terminal-notifier': }
   package{ 'mplayer': }
   package{ 'unrar': }
   package{ 'cmake': }
   package{ 'ctags': }
+  package{ 'pyenv': }
 }
