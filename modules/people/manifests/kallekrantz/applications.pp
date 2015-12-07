@@ -73,7 +73,7 @@ class people::kallekrantz::applications{
   include fonts
   include vcprompt
 
-  package{ ['vlc', 'istat-menus'] :
+  package{ ['vlc', 'istat-menus', 'knock'] :
     provider => brewcask,
     ensure => installed
   }

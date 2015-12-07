@@ -6,7 +6,7 @@ class people::kallekrantz::dotfiles{
     require applications
 
     repository { $emacs_dir:
-      source => "$syl20bnr/spacemacs"
+      source => "syl20bnr/spacemacs"
     }
     file { "${home}/.emacs.d":
       ensure => link,
