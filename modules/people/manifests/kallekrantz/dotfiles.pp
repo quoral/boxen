@@ -6,7 +6,7 @@ class people::kallekrantz::dotfiles{
     require applications
 
     repository { $emacs_dir:
-      source => "${::github_login}/emacs.d"
+      source => "$syl20bnr/spacemacs"
     }
     file { "${home}/.emacs.d":
       ensure => link,
@@ -15,6 +15,12 @@ class people::kallekrantz::dotfiles{
 
     repository { $dotfiles_dir:
       source => "${::github_login}/dotfiles"
+    }
+
+    file { "${home}/.spacemacs":
+      ensure => link,
+      source => "${dotfiles_dir}/spacemacs",
+      require => Repository[$dotfiles_dir]
     }
 
     file { "${home}/.vim":

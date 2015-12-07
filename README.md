@@ -117,6 +117,7 @@ If you do not want to do encrypt your hard drive, you can use the `--no-fde`.
 My boxen project provides the following by default:
 
 * Homebrew
+* Homebrew-Cask
 * Git
 * Hub
 * dnsmasq w/ .dev resolver for localhost
