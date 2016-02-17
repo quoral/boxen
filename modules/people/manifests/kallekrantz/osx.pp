@@ -2,14 +2,6 @@ class people::kallekrantz::osx{
 
     include dockutil
 
-    dockutil::item{ 'Add Chrome':
-        item    => "/Applications/Google Chrome Canary.app",
-        label   => "Google Chrome",
-        position => 1,
-        action  => "add",
-        require => Class['chrome::canary']
-    }
-
     dockutil::item { 'Add iTerm':
         item     => "/Applications/iTerm.app",
         label    => "iTerm",

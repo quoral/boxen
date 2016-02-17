@@ -73,7 +73,7 @@ class people::kallekrantz::applications{
   include fonts
   include vcprompt
 
-  package{ ['vlc', 'istat-menus', 'knock'] :
+  package{ ['vlc', 'istat-menus', 'knock', 'bartender', 'pycharm-ce'] :
     provider => brewcask,
     ensure => installed
   }
@@ -86,5 +86,5 @@ class people::kallekrantz::applications{
   package{ 'unrar': }
   package{ 'cmake': }
   package{ 'ctags': }
-  package{ 'pyenv': }
+
 }

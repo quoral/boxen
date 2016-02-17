@@ -35,6 +35,12 @@ class people::kallekrantz::dotfiles{
       require => Repository[$dotfiles_dir]
     }
 
+    file { "${home}/.zshenv":
+      ensure  => link,
+      target  => "${dotfiles_dir}/zshenv",
+      require => Repository[$dotfiles_dir]
+    }
+
     file { "${home}/.vimrc":
       ensure  => link,
       target  => "${dotfiles_dir}/vimrc",
